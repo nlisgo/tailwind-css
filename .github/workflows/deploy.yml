@@ -42,7 +42,7 @@ jobs:
         run: |
           mkdir -p deploy/css
           cp src/index.html deploy/index.html
-          cp src/css/style.css deploy/style-compiled.css
+          cp src/css/style.css deploy/css/style-compiled.css
           touch deploy/.nojekyll
           echo "Deployment contents:"
           ls -la deploy/
