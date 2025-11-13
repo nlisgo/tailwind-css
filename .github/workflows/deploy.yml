@@ -41,9 +41,8 @@ jobs:
       - name: Prepare deployment directory
         run: |
           mkdir -p deploy
-          cp index.html deploy/
-          cp -r src deploy/
-          cp -r dist deploy/
+          cp src/index.html deploy/index.html
+          cp -r src/dist deploy/dist
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
