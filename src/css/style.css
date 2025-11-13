@@ -1,1 +1,149 @@
 @import "tailwindcss";
+
+/* =====================================================
+   CUSTOM CSS EXAMPLES
+   You can add your own CSS here alongside Tailwind!
+   ===================================================== */
+
+/* 1. CUSTOM CSS VARIABLES */
+:root {
+  --custom-primary: #6366f1;
+  --custom-accent: #f59e0b;
+  --custom-spacing: 2rem;
+}
+
+/* 2. CUSTOM ANIMATIONS */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* 3. CUSTOM COMPONENT CLASSES */
+.custom-card {
+  background: white;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  transition: all 0.3s ease;
+}
+
+.custom-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+}
+
+.custom-gradient-text {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: bold;
+}
+
+.custom-animated-gradient {
+  background: linear-gradient(270deg, #ff6b6b, #4ecdc4, #45b7d1, #f7b731);
+  background-size: 400% 400%;
+  animation: gradient-shift 8s ease infinite;
+}
+
+/* 4. CUSTOM UTILITY CLASSES */
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+.pulse-slow-animation {
+  animation: pulse-slow 3s ease-in-out infinite;
+}
+
+.text-shadow-sm {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.text-shadow-lg {
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* 5. CUSTOM GLASS MORPHISM EFFECT */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* 6. CUSTOM BUTTON STYLES */
+.custom-button-primary {
+  background: var(--custom-primary);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.custom-button-primary:hover {
+  background: #4f46e5;
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+}
+
+.custom-button-primary:active {
+  transform: scale(0.98);
+}
+
+/* 7. CUSTOM SCROLLBAR (for webkit browsers) */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* 8. CUSTOM SELECTION COLOR */
+.custom-selection::selection {
+  background: #fbbf24;
+  color: #1f2937;
+}
+
+/* 9. USING CSS VARIABLES WITH CUSTOM SPACING */
+.custom-spacing {
+  padding: var(--custom-spacing);
+  margin-bottom: var(--custom-spacing);
+}
