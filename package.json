@@ -1,0 +1,18 @@
+{
+  "name": "tailwind-css",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./src/css/style.css -o ./dist/style.css --watch",
+    "build": "npx tailwindcss -i ./src/css/style.css -o ./dist/style.css --minify",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.17",
+    "@tailwindcss/language-server": "^0.14.29",
+    "tailwindcss": "^4.1.17"
+  }
+}

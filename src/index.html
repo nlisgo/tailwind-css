@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS Showcase - Mobile First</title>
+    <link rel="stylesheet" href="../dist/style.css">
+</head>
+<body class="bg-gray-50">
+
+    <!-- NAVIGATION BAR - Mobile First Example -->
+    <!-- Base styles = mobile, then sm:, md:, lg:, xl:, 2xl: override for larger screens -->
+    <nav class="bg-blue-600 text-white p-4 md:p-6 sticky top-0 shadow-lg">
+        <div class="container mx-auto">
+            <!-- Mobile: stack vertically, Desktop: horizontal flex -->
+            <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-4">
+                <h1 class="text-2xl md:text-3xl font-bold">Tailwind Showcase</h1>
+                <!-- Mobile: full width buttons, Desktop: auto width -->
+                <div class="flex flex-col sm:flex-row gap-2 sm:gap-4">
+                    <a href="#responsive" class="bg-blue-700 hover:bg-blue-800 px-4 py-2 rounded text-center transition-colors">Responsive</a>
+                    <a href="#components" class="bg-blue-700 hover:bg-blue-800 px-4 py-2 rounded text-center transition-colors">Components</a>
+                    <a href="#grid" class="bg-blue-700 hover:bg-blue-800 px-4 py-2 rounded text-center transition-colors">Grid</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION - Responsive Typography & Spacing -->
+    <section class="bg-gradient-to-r from-purple-500 to-pink-500 text-white py-12 md:py-20 lg:py-32">
+        <div class="container mx-auto px-4">
+            <!-- Mobile: small text, Desktop: large text -->
+            <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">
+                Mobile-First Design
+            </h2>
+            <!-- Mobile: smaller text, Desktop: larger -->
+            <p class="text-lg md:text-xl lg:text-2xl mb-6 md:mb-8 max-w-2xl">
+                Tailwind CSS uses a mobile-first breakpoint system. Start with mobile styles, then add responsive modifiers.
+            </p>
+            <!-- Mobile: stack, Desktop: inline -->
+            <div class="flex flex-col sm:flex-row gap-4">
+                <button class="bg-white text-purple-600 px-6 py-3 md:px-8 md:py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all transform hover:scale-105">
+                    Get Started
+                </button>
+                <button class="border-2 border-white px-6 py-3 md:px-8 md:py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all">
+                    Learn More
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- BREAKPOINT EXPLANATION SECTION -->
+    <section id="responsive" class="py-12 md:py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-800">Understanding Breakpoints</h2>
+            <div class="bg-blue-50 border-l-4 border-blue-600 p-6 mb-8 rounded-r">
+                <h3 class="font-bold text-xl mb-3 text-blue-900">Mobile-First Philosophy</h3>
+                <p class="text-gray-700 mb-4">
+                    Tailwind uses a <strong>mobile-first</strong> breakpoint system. Base utilities apply to all screen sizes,
+                    then you use responsive prefixes to override for larger screens:
+                </p>
+                <ul class="space-y-2 text-gray-700 font-mono text-sm">
+                    <li><span class="font-bold">Default</span> - Applies to all screens (0px+)</li>
+                    <li><span class="font-bold text-green-600">sm:</span> - Small screens and up (640px+)</li>
+                    <li><span class="font-bold text-blue-600">md:</span> - Medium screens and up (768px+)</li>
+                    <li><span class="font-bold text-purple-600">lg:</span> - Large screens and up (1024px+)</li>
+                    <li><span class="font-bold text-orange-600">xl:</span> - Extra large screens and up (1280px+)</li>
+                    <li><span class="font-bold text-red-600">2xl:</span> - 2X large screens and up (1536px+)</li>
+                </ul>
+            </div>
+
+            <!-- VISUAL BREAKPOINT DEMO -->
+            <div class="bg-gray-100 p-6 rounded-lg">
+                <h3 class="font-bold text-xl mb-4">Responsive Box Demo</h3>
+                <p class="mb-4 text-gray-600">Resize your browser to see this box change:</p>
+                <!-- This box changes color based on screen size -->
+                <div class="
+                    p-8 rounded-lg text-center font-bold text-white transition-all
+                    bg-gray-500
+                    sm:bg-green-500
+                    md:bg-blue-500
+                    lg:bg-purple-500
+                    xl:bg-orange-500
+                    2xl:bg-red-500
+                ">
+                    <p class="text-2xl mb-2">
+                        <span class="sm:hidden">Default (Mobile)</span>
+                        <span class="hidden sm:inline md:hidden">sm: Small</span>
+                        <span class="hidden md:inline lg:hidden">md: Medium</span>
+                        <span class="hidden lg:inline xl:hidden">lg: Large</span>
+                        <span class="hidden xl:inline 2xl:hidden">xl: Extra Large</span>
+                        <span class="hidden 2xl:inline">2xl: 2X Large</span>
+                    </p>
+                    <p class="text-sm opacity-90">Current breakpoint active</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CARD GRID - Responsive Columns -->
+    <section id="grid" class="py-12 md:py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-gray-800">Responsive Grid Layout</h2>
+            <p class="text-gray-600 mb-6">
+                Mobile: 1 column → Tablet: 2 columns → Desktop: 3 columns → Large: 4 columns
+            </p>
+
+            <!-- Grid: 1 col mobile, 2 col sm, 3 col md, 4 col lg -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+                <!-- Card 1 -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-blue-400 to-blue-600"></div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2 text-gray-800">Colors & Gradients</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Tailwind provides a comprehensive color palette with gradients.
+                        </p>
+                        <button class="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 rounded transition-colors">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-purple-400 to-pink-600"></div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2 text-gray-800">Flexbox & Grid</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Build complex layouts easily with utility classes.
+                        </p>
+                        <button class="w-full bg-purple-500 hover:bg-purple-600 text-white py-2 rounded transition-colors">
+                            Explore
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-green-400 to-emerald-600"></div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2 text-gray-800">Spacing & Sizing</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Consistent spacing scale from padding to margins.
+                        </p>
+                        <button class="w-full bg-green-500 hover:bg-green-600 text-white py-2 rounded transition-colors">
+                            Discover
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-orange-400 to-red-600"></div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2 text-gray-800">Animations</h3>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Transitions, transforms, and hover effects built-in.
+                        </p>
+                        <button class="w-full bg-orange-500 hover:bg-orange-600 text-white py-2 rounded transition-colors">
+                            Animate
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPONENT SHOWCASE -->
+    <section id="components" class="py-12 md:py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-gray-800">Component Examples</h2>
+
+            <!-- Two Column Layout - Stacks on mobile -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+                <!-- Alerts -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">Alerts</h3>
+                    <div class="space-y-4">
+                        <div class="bg-blue-100 border-l-4 border-blue-500 text-blue-700 p-4 rounded">
+                            <p class="font-bold">Info</p>
+                            <p class="text-sm">This is an informational message.</p>
+                        </div>
+                        <div class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 rounded">
+                            <p class="font-bold">Success</p>
+                            <p class="text-sm">Operation completed successfully!</p>
+                        </div>
+                        <div class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 rounded">
+                            <p class="font-bold">Warning</p>
+                            <p class="text-sm">Please review before proceeding.</p>
+                        </div>
+                        <div class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 rounded">
+                            <p class="font-bold">Error</p>
+                            <p class="text-sm">Something went wrong!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Badges & Buttons -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">Badges & Buttons</h3>
+
+                    <div class="mb-6">
+                        <h4 class="font-semibold mb-3 text-gray-700">Badges</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm">Default</span>
+                            <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-sm">Primary</span>
+                            <span class="bg-green-500 text-white px-3 py-1 rounded-full text-sm">Success</span>
+                            <span class="bg-yellow-500 text-white px-3 py-1 rounded-full text-sm">Warning</span>
+                            <span class="bg-red-500 text-white px-3 py-1 rounded-full text-sm">Danger</span>
+                            <span class="bg-purple-500 text-white px-3 py-1 rounded-full text-sm">Purple</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="font-semibold mb-3 text-gray-700">Buttons</h4>
+                        <div class="flex flex-wrap gap-3">
+                            <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded transition-colors">
+                                Primary
+                            </button>
+                            <button class="bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded transition-colors">
+                                Secondary
+                            </button>
+                            <button class="border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white px-4 py-2 rounded transition-all">
+                                Outline
+                            </button>
+                            <button class="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-4 py-2 rounded transition-all transform hover:scale-105">
+                                Gradient
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Form Example -->
+            <div class="mt-12 max-w-2xl mx-auto">
+                <h3 class="text-2xl font-bold mb-6">Form Components</h3>
+                <form class="bg-gray-50 p-6 md:p-8 rounded-lg shadow-md space-y-6">
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-2" for="name">Full Name</label>
+                        <input
+                            type="text"
+                            id="name"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                            placeholder="John Doe"
+                        >
+                    </div>
+
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-2" for="email">Email</label>
+                        <input
+                            type="email"
+                            id="email"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                            placeholder="john@example.com"
+                        >
+                    </div>
+
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-2" for="message">Message</label>
+                        <textarea
+                            id="message"
+                            rows="4"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none"
+                            placeholder="Your message here..."
+                        ></textarea>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <input
+                            type="checkbox"
+                            id="agree"
+                            class="w-4 h-4 text-blue-600 rounded focus:ring-2 focus:ring-blue-500"
+                        >
+                        <label for="agree" class="text-gray-700">I agree to the terms and conditions</label>
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 rounded-lg transition-all transform hover:scale-105 active:scale-95"
+                    >
+                        Submit Form
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- UTILITY SHOWCASE -->
+    <section class="py-12 md:py-16 bg-gradient-to-br from-gray-50 to-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-gray-800">More Utilities</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Shadows -->
+                <div class="bg-white p-6 rounded-lg">
+                    <h3 class="font-bold text-xl mb-4">Shadows</h3>
+                    <div class="space-y-4">
+                        <div class="bg-gray-50 p-4 rounded shadow-sm">shadow-sm</div>
+                        <div class="bg-gray-50 p-4 rounded shadow">shadow</div>
+                        <div class="bg-gray-50 p-4 rounded shadow-md">shadow-md</div>
+                        <div class="bg-gray-50 p-4 rounded shadow-lg">shadow-lg</div>
+                        <div class="bg-gray-50 p-4 rounded shadow-xl">shadow-xl</div>
+                    </div>
+                </div>
+
+                <!-- Borders & Rounded -->
+                <div class="bg-white p-6 rounded-lg">
+                    <h3 class="font-bold text-xl mb-4">Borders & Radius</h3>
+                    <div class="space-y-4">
+                        <div class="bg-blue-500 text-white p-4 rounded-none">rounded-none</div>
+                        <div class="bg-blue-500 text-white p-4 rounded-sm">rounded-sm</div>
+                        <div class="bg-blue-500 text-white p-4 rounded">rounded</div>
+                        <div class="bg-blue-500 text-white p-4 rounded-lg">rounded-lg</div>
+                        <div class="bg-blue-500 text-white p-4 rounded-full">rounded-full</div>
+                    </div>
+                </div>
+
+                <!-- Typography -->
+                <div class="bg-white p-6 rounded-lg">
+                    <h3 class="font-bold text-xl mb-4">Typography</h3>
+                    <div class="space-y-2">
+                        <p class="text-xs">text-xs: Extra small text</p>
+                        <p class="text-sm">text-sm: Small text</p>
+                        <p class="text-base">text-base: Base text</p>
+                        <p class="text-lg">text-lg: Large text</p>
+                        <p class="text-xl">text-xl: Extra large</p>
+                        <p class="text-2xl">text-2xl: 2X large</p>
+                    </div>
+                    <div class="mt-4 space-y-1">
+                        <p class="font-light">font-light</p>
+                        <p class="font-normal">font-normal</p>
+                        <p class="font-medium">font-medium</p>
+                        <p class="font-semibold">font-semibold</p>
+                        <p class="font-bold">font-bold</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- RESPONSIVE EXAMPLES SECTION -->
+    <section class="py-12 md:py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-800">Responsive Patterns</h2>
+
+            <!-- Example 1: Responsive Padding -->
+            <div class="mb-8 bg-blue-50 border border-blue-200 rounded-lg">
+                <div class="p-2 sm:p-4 md:p-6 lg:p-8 xl:p-12">
+                    <h3 class="font-bold text-xl mb-2">Responsive Padding</h3>
+                    <code class="text-sm text-blue-800 bg-blue-100 px-2 py-1 rounded">
+                        p-2 sm:p-4 md:p-6 lg:p-8 xl:p-12
+                    </code>
+                    <p class="mt-2 text-gray-600">
+                        Padding increases as screen size grows. Resize to see the effect.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Example 2: Hide/Show Elements -->
+            <div class="mb-8 bg-green-50 border border-green-200 rounded-lg p-6">
+                <h3 class="font-bold text-xl mb-4">Responsive Visibility</h3>
+                <div class="space-y-2">
+                    <div class="bg-green-500 text-white p-4 rounded md:hidden">
+                        <strong>Mobile Only:</strong> hidden on md and up
+                    </div>
+                    <div class="bg-blue-500 text-white p-4 rounded hidden md:block lg:hidden">
+                        <strong>Tablet Only:</strong> visible only on md screens
+                    </div>
+                    <div class="bg-purple-500 text-white p-4 rounded hidden lg:block">
+                        <strong>Desktop Only:</strong> visible only on lg and up
+                    </div>
+                </div>
+            </div>
+
+            <!-- Example 3: Responsive Text Alignment -->
+            <div class="mb-8 bg-purple-50 border border-purple-200 rounded-lg p-6">
+                <h3 class="font-bold text-xl mb-4">Responsive Text Alignment</h3>
+                <p class="text-left sm:text-center md:text-right lg:text-justify text-gray-700">
+                    This paragraph changes alignment based on screen size.
+                    Mobile: left, Small: center, Medium: right, Large: justify.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                </p>
+                <code class="text-sm text-purple-800 bg-purple-100 px-2 py-1 rounded mt-2 inline-block">
+                    text-left sm:text-center md:text-right lg:text-justify
+                </code>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <!-- Mobile: stack, Desktop: 3 columns -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="font-bold text-xl mb-4">About Tailwind</h3>
+                    <p class="text-gray-400">
+                        A utility-first CSS framework for rapidly building custom user interfaces.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-xl mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Documentation</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Components</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Examples</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-xl mb-4">Mobile First</h3>
+                    <p class="text-gray-400">
+                        Always start with base styles, then add responsive modifiers for larger screens.
+                    </p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>Built with Tailwind CSS - Mobile First Approach</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
