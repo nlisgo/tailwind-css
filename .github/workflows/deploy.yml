@@ -40,9 +40,13 @@ jobs:
 
       - name: Prepare deployment directory
         run: |
-          mkdir -p deploy
+          mkdir -p deploy/dist
           cp src/index.html deploy/index.html
-          cp -r src/dist deploy/dist
+          cp -r src/dist/* deploy/dist/
+          touch deploy/.nojekyll
+          echo "Deployment contents:"
+          ls -la deploy/
+          ls -la deploy/dist/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
