@@ -123,9 +123,32 @@ The GitHub Actions workflow (`.github/workflows/deploy.yml`):
 - Check that `dist/style.css` is being created in the workflow
 - Verify the HTML link path: `<link rel="stylesheet" href="dist/style.css">`
 
+## Extending Tailwind v4 Theme
+
+You can extend Tailwind's default theme using the `@theme` directive in `src/css/style.css`:
+
+```css
+@theme {
+  --color-brand: #abc123;
+  --spacing-72: 18rem;
+  --animate-wiggle: wiggle 1s ease-in-out infinite;
+}
+```
+
+Examples included:
+- **Custom colors**: `bg-brand`, `bg-brand-light`, `bg-brand-dark`, `bg-accent`
+- **Custom fonts**: `font-handwriting`, `font-display`
+- **Custom animations**: `animate-spin-slow`, `animate-bounce-slow`, `animate-wiggle`
+- **Custom spacing**: `p-72`, `p-84`, `p-96`, `p-128`
+- **Custom border radius**: `rounded-4xl`, `rounded-5xl`
+
+After modifying `@theme`, run `npm run build` to regenerate the CSS.
+
+**Note:** Tailwind v4 uses `@theme` in CSS instead of `tailwind.config.js` for theme extensions.
+
 ## Custom CSS
 
-You can add your own custom CSS in `src/css/style.css` after the `@import "tailwindcss";` line.
+You can also add your own custom CSS in `src/css/style.css` after the `@import "tailwindcss";` line.
 
 Examples included:
 - Custom animations (float, pulse, gradient shift)
