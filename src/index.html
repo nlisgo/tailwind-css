@@ -24,6 +24,7 @@
                     <a href="#components" class="bg-blue-700 hover:bg-blue-800 px-4 py-2 rounded text-center transition-colors">Components</a>
                     <a href="#grid" class="bg-blue-700 hover:bg-blue-800 px-4 py-2 rounded text-center transition-colors">Grid</a>
                     <a href="#custom-css" class="bg-blue-700 hover:bg-blue-800 px-4 py-2 rounded text-center transition-colors">Custom CSS</a>
+                    <a href="#bem-tailwind" class="bg-blue-700 hover:bg-blue-800 px-4 py-2 rounded text-center transition-colors">BEM + Tailwind</a>
                     <a href="#config" class="bg-blue-700 hover:bg-blue-800 px-4 py-2 rounded text-center transition-colors">Config</a>
                 </div>
             </div>
@@ -400,7 +401,7 @@
     </section>
 
     <!-- CUSTOM CSS EXAMPLES SECTION -->
-    <section id="custom-css" class="py-12 md:py-16 bg-gradient-to-br from-indigo-50 to-purple-50">
+    <section id="custom-css" class="py-12 md:py-16 bg-linear-to-br from-indigo-50 to-purple-50">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-800">Custom CSS Examples</h2>
             <p class="text-gray-600 mb-8 max-w-3xl">
@@ -478,7 +479,7 @@
                     </div>
 
                     <!-- Glass Effect -->
-                    <div class="bg-gradient-to-br from-blue-400 to-purple-500 p-1 rounded-lg">
+                    <div class="bg-linear-to-br from-blue-400 to-purple-500 p-1 rounded-lg">
                         <div class="glass-effect p-6 rounded-lg text-white h-full">
                             <h4 class="font-bold text-xl mb-2">Glass Morphism</h4>
                             <p class="mb-4 text-sm">
@@ -575,6 +576,195 @@
                         <li>Run <code class="bg-blue-100 px-2 py-1 rounded">npm run build</code> or <code class="bg-blue-100 px-2 py-1 rounded">npm run dev</code></li>
                         <li>Your custom classes are now available to use alongside Tailwind!</li>
                     </ol>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- BEM + TAILWIND HYBRID APPROACH -->
+    <section id="bem-tailwind" class="py-12 md:py-16 bg-linear-to-br from-gray-50 to-blue-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-800">BEM Classes + Tailwind CSS</h2>
+            <p class="text-gray-600 mb-8 max-w-3xl">
+                Use clean, semantic BEM class names in your HTML while leveraging Tailwind utilities in your CSS.
+                This gives you readable markup and the power of Tailwind behind the scenes.
+            </p>
+
+            <!-- Product Card Example -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold mb-6 text-gray-800">Product Card Component</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <article class="product-card">
+                        <div class="product-card__image">
+                            <span class="product-card__badge">New</span>
+                        </div>
+                        <div class="product-card__content">
+                            <h3 class="product-card__title">Premium Headphones</h3>
+                            <p class="product-card__description">
+                                High-quality wireless headphones with noise cancellation.
+                            </p>
+                            <div class="product-card__footer">
+                                <span class="product-card__price">$299.99</span>
+                                <button class="product-card__button">Add to Cart</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card product-card--featured">
+                        <div class="product-card__image">
+                            <span class="product-card__badge product-card__badge--sale">Sale</span>
+                        </div>
+                        <div class="product-card__content">
+                            <h3 class="product-card__title">Smart Watch Pro</h3>
+                            <p class="product-card__description">
+                                Track your fitness and stay connected on the go.
+                            </p>
+                            <div class="product-card__footer">
+                                <span class="product-card__price">$399.99</span>
+                                <button class="product-card__button">Add to Cart</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-card__image product-card__image--gradient-alt">
+                            <span class="product-card__badge">Hot</span>
+                        </div>
+                        <div class="product-card__content">
+                            <h3 class="product-card__title">Wireless Keyboard</h3>
+                            <p class="product-card__description">
+                                Mechanical switches with RGB backlighting.
+                            </p>
+                            <div class="product-card__footer">
+                                <span class="product-card__price">$159.99</span>
+                                <button class="product-card__button">Add to Cart</button>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+
+            <!-- User Profile Example -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold mb-6 text-gray-800">User Profile Component</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                    <div class="user-profile">
+                        <div class="user-profile__header">
+                            <div class="user-profile__avatar">JD</div>
+                            <div class="user-profile__info">
+                                <h4 class="user-profile__name">John Doe</h4>
+                                <p class="user-profile__role">Senior Developer</p>
+                            </div>
+                        </div>
+                        <div class="user-profile__stats">
+                            <div class="user-profile__stat">
+                                <span class="user-profile__stat-value">156</span>
+                                <span class="user-profile__stat-label">Projects</span>
+                            </div>
+                            <div class="user-profile__stat">
+                                <span class="user-profile__stat-value">2.4k</span>
+                                <span class="user-profile__stat-label">Followers</span>
+                            </div>
+                            <div class="user-profile__stat">
+                                <span class="user-profile__stat-value">89</span>
+                                <span class="user-profile__stat-label">Following</span>
+                            </div>
+                        </div>
+                        <button class="user-profile__action">Follow</button>
+                    </div>
+
+                    <div class="user-profile user-profile--premium">
+                        <div class="user-profile__header">
+                            <div class="user-profile__avatar user-profile__avatar--premium">SK</div>
+                            <div class="user-profile__info">
+                                <h4 class="user-profile__name">Sarah Kim</h4>
+                                <p class="user-profile__role">Design Lead</p>
+                            </div>
+                        </div>
+                        <div class="user-profile__stats">
+                            <div class="user-profile__stat">
+                                <span class="user-profile__stat-value">298</span>
+                                <span class="user-profile__stat-label">Projects</span>
+                            </div>
+                            <div class="user-profile__stat">
+                                <span class="user-profile__stat-value">5.1k</span>
+                                <span class="user-profile__stat-label">Followers</span>
+                            </div>
+                            <div class="user-profile__stat">
+                                <span class="user-profile__stat-value">142</span>
+                                <span class="user-profile__stat-label">Following</span>
+                            </div>
+                        </div>
+                        <button class="user-profile__action">Follow</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Navigation Menu Example -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold mb-6 text-gray-800">Navigation Menu Component</h3>
+                <nav class="nav-menu">
+                    <a href="#" class="nav-menu__item nav-menu__item--active">Dashboard</a>
+                    <a href="#" class="nav-menu__item">Products</a>
+                    <a href="#" class="nav-menu__item">Orders</a>
+                    <a href="#" class="nav-menu__item">Analytics</a>
+                    <a href="#" class="nav-menu__item">Settings</a>
+                </nav>
+            </div>
+
+            <!-- Code Examples -->
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-bold mb-4 text-gray-800">How It Works</h3>
+                <p class="text-gray-600 mb-6">
+                    Clean HTML with BEM classes, Tailwind utilities in CSS:
+                </p>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="font-bold mb-3">HTML (Clean & Semantic)</h4>
+                        <pre class="bg-gray-900 text-gray-100 p-4 rounded text-xs overflow-x-auto"><code>&lt;article class="product-card"&gt;
+  &lt;div class="product-card__image"&gt;
+    &lt;span class="product-card__badge"&gt;New&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class="product-card__content"&gt;
+    &lt;h3 class="product-card__title"&gt;Product Name&lt;/h3&gt;
+    &lt;p class="product-card__description"&gt;Description&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/article&gt;</code></pre>
+                    </div>
+
+                    <div>
+                        <h4 class="font-bold mb-3">CSS (Tailwind Power)</h4>
+                        <pre class="bg-gray-900 text-gray-100 p-4 rounded text-xs overflow-x-auto"><code>.product-card {
+  @apply bg-white rounded-lg shadow-md;
+  @apply hover:shadow-xl transition-shadow;
+  @apply overflow-hidden;
+}
+
+.product-card__title {
+  @apply text-xl font-bold text-gray-800 mb-2;
+}
+
+.product-card__description {
+  @apply text-gray-600 text-sm mb-4;
+}</code></pre>
+                    </div>
+                </div>
+
+                <div class="mt-6 bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r">
+                    <h4 class="font-bold mb-2 text-blue-900">Benefits of This Approach:</h4>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700 text-sm">
+                        <li>Clean, readable HTML without long class strings</li>
+                        <li>Semantic class names that describe purpose, not appearance</li>
+                        <li>All the power of Tailwind utilities in your CSS</li>
+                        <li>Easy to understand component structure</li>
+                        <li>Better for team collaboration and maintenance</li>
+                    </ul>
                 </div>
             </div>
 

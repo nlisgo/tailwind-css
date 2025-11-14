@@ -185,3 +185,147 @@
   padding: var(--custom-spacing);
   margin-bottom: var(--custom-spacing);
 }
+
+/* =====================================================
+   BEM + TAILWIND HYBRID APPROACH
+   Clean semantic class names using Tailwind utilities
+   ===================================================== */
+
+/* PRODUCT CARD COMPONENT */
+.product-card {
+  @apply bg-white rounded-lg shadow-md overflow-hidden;
+  @apply transition-shadow duration-300;
+  @apply hover:shadow-xl;
+}
+
+.product-card--featured {
+  @apply ring-2 ring-purple-500;
+}
+
+.product-card__image {
+  @apply h-48 bg-linear-to-br from-blue-400 to-purple-600;
+  @apply relative;
+}
+
+.product-card__image--gradient-alt {
+  @apply bg-linear-to-br from-orange-400 to-pink-600;
+}
+
+.product-card__badge {
+  @apply absolute top-3 right-3;
+  @apply bg-white text-blue-600 px-3 py-1 rounded-full;
+  @apply text-xs font-bold uppercase;
+  @apply shadow-md;
+}
+
+.product-card__badge--sale {
+  @apply bg-red-500 text-white;
+}
+
+.product-card__content {
+  @apply p-6;
+}
+
+.product-card__title {
+  @apply text-xl font-bold text-gray-800 mb-2;
+}
+
+.product-card__description {
+  @apply text-gray-600 text-sm mb-4;
+}
+
+.product-card__footer {
+  @apply flex justify-between items-center;
+}
+
+.product-card__price {
+  @apply text-2xl font-bold text-purple-600;
+}
+
+.product-card__button {
+  @apply bg-blue-500 hover:bg-blue-600 text-white;
+  @apply px-4 py-2 rounded-lg;
+  @apply transition-colors duration-200;
+  @apply font-semibold text-sm;
+}
+
+/* USER PROFILE COMPONENT */
+.user-profile {
+  @apply bg-white rounded-xl shadow-lg p-6;
+  @apply border border-gray-100;
+}
+
+.user-profile--premium {
+  @apply bg-linear-to-br from-purple-50 to-pink-50;
+  @apply border-purple-200;
+}
+
+.user-profile__header {
+  @apply flex items-center gap-4 mb-6;
+}
+
+.user-profile__avatar {
+  @apply w-16 h-16 rounded-full;
+  @apply bg-linear-to-br from-blue-400 to-purple-600;
+  @apply flex items-center justify-center;
+  @apply text-white font-bold text-xl;
+}
+
+.user-profile__avatar--premium {
+  @apply bg-linear-to-br from-purple-500 to-pink-500;
+  @apply ring-4 ring-purple-200;
+}
+
+.user-profile__info {
+  @apply flex-1;
+}
+
+.user-profile__name {
+  @apply text-xl font-bold text-gray-800 mb-1;
+}
+
+.user-profile__role {
+  @apply text-gray-600 text-sm;
+}
+
+.user-profile__stats {
+  @apply flex justify-around mb-6;
+  @apply py-4 border-y border-gray-200;
+}
+
+.user-profile__stat {
+  @apply flex flex-col items-center;
+}
+
+.user-profile__stat-value {
+  @apply text-2xl font-bold text-gray-800;
+}
+
+.user-profile__stat-label {
+  @apply text-xs text-gray-500 uppercase tracking-wide;
+}
+
+.user-profile__action {
+  @apply w-full bg-blue-500 hover:bg-blue-600 text-white;
+  @apply py-3 rounded-lg font-semibold;
+  @apply transition-all duration-200;
+  @apply transform hover:scale-105 active:scale-95;
+}
+
+/* NAVIGATION MENU COMPONENT */
+.nav-menu {
+  @apply bg-white rounded-lg shadow-md p-2;
+  @apply flex flex-wrap gap-2;
+}
+
+.nav-menu__item {
+  @apply px-4 py-2 rounded-md;
+  @apply text-gray-600 font-medium;
+  @apply transition-all duration-200;
+  @apply hover:bg-gray-100 hover:text-gray-900;
+}
+
+.nav-menu__item--active {
+  @apply bg-blue-500 text-white;
+  @apply hover:bg-blue-600 hover:text-white;
+}
