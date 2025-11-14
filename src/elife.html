@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eLife - Making peer review and publishing better for science</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Noto+Serif:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/elife-compiled.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="site-header__container">
+            <div class="site-header__logo">
+                <span class="logo">eLife</span>
+            </div>
+
+            <nav class="main-nav">
+                <a href="index.html" class="main-nav__item">← Tailwind Showcase</a>
+                <a href="#" class="main-nav__item main-nav__item--active">Home</a>
+                <a href="#" class="main-nav__item">Browse</a>
+                <a href="#" class="main-nav__item">Magazine</a>
+                <a href="#" class="main-nav__item">Community</a>
+                <a href="#" class="main-nav__item">About</a>
+            </nav>
+
+            <div class="site-header__actions">
+                <button class="btn btn--secondary">Alerts</button>
+                <button class="btn btn--primary">Submit Research</button>
+            </div>
+        </div>
+
+        <div class="search-bar">
+            <div class="search-bar__container">
+                <input type="search" class="search-bar__input" placeholder="Search by keyword or author">
+                <button class="search-bar__button">Search</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero__container">
+            <h1 class="hero__title">Making peer review and publishing better for science</h1>
+            <div class="hero__actions">
+                <button class="btn btn--large btn--primary">Browse Latest Research</button>
+                <button class="btn btn--large btn--outline">Learn About eLife</button>
+            </div>
+            <div class="hero__filter">
+                <select class="category-filter">
+                    <option>All research categories</option>
+                    <option>Biochemistry and Chemical Biology</option>
+                    <option>Cancer Biology</option>
+                    <option>Cell Biology</option>
+                    <option>Computational and Systems Biology</option>
+                    <option>Ecology</option>
+                    <option>Genetics and Genomics</option>
+                    <option>Immunology and Inflammation</option>
+                    <option>Neuroscience</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- HIGHLIGHTS SECTION -->
+    <section class="highlights">
+        <div class="highlights__container">
+            <h2 class="section-title">Highlights</h2>
+
+            <div class="article-grid">
+                <!-- Article Card 1 -->
+                <article class="article-card">
+                    <div class="article-card__image">
+                        <div class="article-card__placeholder">
+                            <span>🧬</span>
+                        </div>
+                    </div>
+                    <div class="article-card__content">
+                        <span class="badge badge--reviewed">Reviewed Preprint</span>
+                        <h3 class="article-card__title">Neural mechanisms underlying decision-making in social contexts</h3>
+                        <p class="article-card__authors">Jane Smith, Robert Chen, Maria Garcia</p>
+                        <time class="article-card__date">Jan 15, 2025</time>
+                    </div>
+                </article>
+
+                <!-- Article Card 2 -->
+                <article class="article-card">
+                    <div class="article-card__image">
+                        <div class="article-card__placeholder">
+                            <span>🦠</span>
+                        </div>
+                    </div>
+                    <div class="article-card__content">
+                        <span class="badge badge--research">Research Article</span>
+                        <h3 class="article-card__title">Immune response mechanisms in bacterial infections</h3>
+                        <p class="article-card__authors">David Kim, Sarah Johnson</p>
+                        <time class="article-card__date">Jan 14, 2025</time>
+                    </div>
+                </article>
+
+                <!-- Article Card 3 -->
+                <article class="article-card">
+                    <div class="article-card__image">
+                        <div class="article-card__placeholder">
+                            <span>🔬</span>
+                        </div>
+                    </div>
+                    <div class="article-card__content">
+                        <span class="badge badge--reviewed">Reviewed Preprint</span>
+                        <h3 class="article-card__title">Protein folding dynamics in neurodegenerative diseases</h3>
+                        <p class="article-card__authors">Emma Watson, James Miller, Li Wei</p>
+                        <time class="article-card__date">Jan 13, 2025</time>
+                    </div>
+                </article>
+
+                <!-- Article Card 4 -->
+                <article class="article-card">
+                    <div class="article-card__image">
+                        <div class="article-card__placeholder">
+                            <span>🌱</span>
+                        </div>
+                    </div>
+                    <div class="article-card__content">
+                        <span class="badge badge--research">Research Article</span>
+                        <h3 class="article-card__title">Plant adaptation mechanisms to climate change</h3>
+                        <p class="article-card__authors">Anna Schmidt, Thomas Brown</p>
+                        <time class="article-card__date">Jan 12, 2025</time>
+                    </div>
+                </article>
+
+                <!-- Article Card 5 -->
+                <article class="article-card">
+                    <div class="article-card__image">
+                        <div class="article-card__placeholder">
+                            <span>🧠</span>
+                        </div>
+                    </div>
+                    <div class="article-card__content">
+                        <span class="badge badge--reviewed">Reviewed Preprint</span>
+                        <h3 class="article-card__title">Synaptic plasticity in learning and memory formation</h3>
+                        <p class="article-card__authors">Michael Chang, Laura Martinez</p>
+                        <time class="article-card__date">Jan 11, 2025</time>
+                    </div>
+                </article>
+
+                <!-- Article Card 6 -->
+                <article class="article-card">
+                    <div class="article-card__image">
+                        <div class="article-card__placeholder">
+                            <span>🔍</span>
+                        </div>
+                    </div>
+                    <div class="article-card__content">
+                        <span class="badge badge--research">Research Article</span>
+                        <h3 class="article-card__title">Genomic analysis of cancer cell heterogeneity</h3>
+                        <p class="article-card__authors">Patricia Lee, John Anderson</p>
+                        <time class="article-card__date">Jan 10, 2025</time>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- LATEST RESEARCH SECTION -->
+    <section class="latest-research">
+        <div class="latest-research__container">
+            <h2 class="section-title">Latest Research</h2>
+
+            <div class="research-list">
+                <!-- Research Item 1 -->
+                <article class="research-item">
+                    <div class="research-item__number">1</div>
+                    <div class="research-item__content">
+                        <div class="research-item__meta">
+                            <span class="category-tag">Neuroscience</span>
+                            <span class="research-item__status">
+                                <span class="status-dot status-dot--revised"></span>
+                                Revised
+                            </span>
+                        </div>
+                        <h3 class="research-item__title">Neural circuits controlling sleep-wake transitions in mammals</h3>
+                        <p class="research-item__authors">Alexandra Rivera, Mark Thompson, et al.</p>
+                        <div class="research-item__footer">
+                            <time class="research-item__date">Jan 15, 2025</time>
+                            <span class="badge badge--small badge--reviewed">Reviewed Preprint</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Research Item 2 -->
+                <article class="research-item">
+                    <div class="research-item__number">2</div>
+                    <div class="research-item__content">
+                        <div class="research-item__meta">
+                            <span class="category-tag">Cell Biology</span>
+                            <span class="research-item__status">
+                                <span class="status-dot"></span>
+                                Not revised
+                            </span>
+                        </div>
+                        <h3 class="research-item__title">Mitochondrial dynamics in cellular stress responses</h3>
+                        <p class="research-item__authors">Sophie Chen, Daniel Park</p>
+                        <div class="research-item__footer">
+                            <time class="research-item__date">Jan 15, 2025</time>
+                            <span class="badge badge--small badge--research">Research Article</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Research Item 3 -->
+                <article class="research-item">
+                    <div class="research-item__number">3</div>
+                    <div class="research-item__content">
+                        <div class="research-item__meta">
+                            <span class="category-tag">Immunology</span>
+                            <span class="research-item__status">
+                                <span class="status-dot status-dot--revised"></span>
+                                Revised
+                            </span>
+                        </div>
+                        <h3 class="research-item__title">T cell receptor signaling pathways in autoimmune diseases</h3>
+                        <p class="research-item__authors">Rachel Kumar, Peter Walsh, Maria Santos</p>
+                        <div class="research-item__footer">
+                            <time class="research-item__date">Jan 14, 2025</time>
+                            <span class="badge badge--small badge--reviewed">Reviewed Preprint</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Research Item 4 -->
+                <article class="research-item">
+                    <div class="research-item__number">4</div>
+                    <div class="research-item__content">
+                        <div class="research-item__meta">
+                            <span class="category-tag">Genetics</span>
+                            <span class="research-item__status">
+                                <span class="status-dot"></span>
+                                Not revised
+                            </span>
+                        </div>
+                        <h3 class="research-item__title">CRISPR-mediated gene editing in therapeutic applications</h3>
+                        <p class="research-item__authors">Benjamin Moore, Lisa Zhang</p>
+                        <div class="research-item__footer">
+                            <time class="research-item__date">Jan 14, 2025</time>
+                            <span class="badge badge--small badge--research">Research Article</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Research Item 5 -->
+                <article class="research-item">
+                    <div class="research-item__number">5</div>
+                    <div class="research-item__content">
+                        <div class="research-item__meta">
+                            <span class="category-tag">Ecology</span>
+                            <span class="research-item__status">
+                                <span class="status-dot status-dot--revised"></span>
+                                Revised
+                            </span>
+                        </div>
+                        <h3 class="research-item__title">Biodiversity patterns in tropical rainforest ecosystems</h3>
+                        <p class="research-item__authors">Carlos Mendez, Emily Foster, et al.</p>
+                        <div class="research-item__footer">
+                            <time class="research-item__date">Jan 13, 2025</time>
+                            <span class="badge badge--small badge--reviewed">Reviewed Preprint</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <button class="btn btn--outline btn--full-width">View More Research</button>
+        </div>
+    </section>
+
+    <!-- MAGAZINE SECTION -->
+    <section class="magazine">
+        <div class="magazine__container">
+            <h2 class="section-title">Magazine</h2>
+
+            <div class="magazine-grid">
+                <article class="magazine-card">
+                    <div class="magazine-card__image">
+                        <div class="magazine-card__placeholder">📰</div>
+                    </div>
+                    <div class="magazine-card__content">
+                        <span class="magazine-card__type">Insight</span>
+                        <h3 class="magazine-card__title">The future of open access publishing in life sciences</h3>
+                        <p class="magazine-card__excerpt">Exploring new models for scientific communication and peer review</p>
+                    </div>
+                </article>
+
+                <article class="magazine-card">
+                    <div class="magazine-card__image">
+                        <div class="magazine-card__placeholder">✍️</div>
+                    </div>
+                    <div class="magazine-card__content">
+                        <span class="magazine-card__type">Editorial</span>
+                        <h3 class="magazine-card__title">Building a more inclusive scientific community</h3>
+                        <p class="magazine-card__excerpt">Addressing diversity and equity in research</p>
+                    </div>
+                </article>
+
+                <article class="magazine-card">
+                    <div class="magazine-card__image">
+                        <div class="magazine-card__placeholder">📚</div>
+                    </div>
+                    <div class="magazine-card__content">
+                        <span class="magazine-card__type">Collection</span>
+                        <h3 class="magazine-card__title">Advances in neuroscience research 2024</h3>
+                        <p class="magazine-card__excerpt">A curated selection of breakthrough discoveries</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATEGORIES SECTION -->
+    <section class="categories">
+        <div class="categories__container">
+            <h2 class="section-title">Browse by Category</h2>
+
+            <div class="category-list">
+                <a href="#" class="category-link">Biochemistry and Chemical Biology</a>
+                <a href="#" class="category-link">Cancer Biology</a>
+                <a href="#" class="category-link">Cell Biology</a>
+                <a href="#" class="category-link">Computational and Systems Biology</a>
+                <a href="#" class="category-link">Ecology</a>
+                <a href="#" class="category-link">Evolutionary Biology</a>
+                <a href="#" class="category-link">Genetics and Genomics</a>
+                <a href="#" class="category-link">Immunology and Inflammation</a>
+                <a href="#" class="category-link">Microbiology and Infectious Disease</a>
+                <a href="#" class="category-link">Neuroscience</a>
+                <a href="#" class="category-link">Plant Biology</a>
+                <a href="#" class="category-link">Structural Biology and Molecular Biophysics</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="site-footer__container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3 class="footer-column__title">About</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-links__item">About eLife</a></li>
+                        <li><a href="#" class="footer-links__item">Peer Review</a></li>
+                        <li><a href="#" class="footer-links__item">Careers</a></li>
+                        <li><a href="#" class="footer-links__item">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-column__title">Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-links__item">For Authors</a></li>
+                        <li><a href="#" class="footer-links__item">For Reviewers</a></li>
+                        <li><a href="#" class="footer-links__item">For Editors</a></li>
+                        <li><a href="#" class="footer-links__item">API</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-column__title">Connect</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-links__item">Twitter</a></li>
+                        <li><a href="#" class="footer-links__item">Facebook</a></li>
+                        <li><a href="#" class="footer-links__item">LinkedIn</a></li>
+                        <li><a href="#" class="footer-links__item">YouTube</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-column__title">Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-links__item">Terms of Use</a></li>
+                        <li><a href="#" class="footer-links__item">Privacy Policy</a></li>
+                        <li><a href="#" class="footer-links__item">Accessibility</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="site-footer__bottom">
+                <p class="site-footer__copyright">© 2025 eLife Sciences Publications Ltd. Content licensed under CC BY 4.0</p>
+                <p class="site-footer__address">eLife Sciences Publications Ltd is a limited liability non-profit non-stock corporation incorporated in Delaware, USA</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

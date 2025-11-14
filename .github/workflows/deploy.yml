@@ -36,13 +36,15 @@ jobs:
         run: npm ci
 
       - name: Build Tailwind CSS
-        run: npm run build
+        run: npm run build:all
 
       - name: Prepare deployment directory
         run: |
           mkdir -p deploy/css
           cp src/index.html deploy/index.html
+          cp src/elife.html deploy/elife.html
           cp src/css/style-compiled.css deploy/css/style-compiled.css
+          cp src/css/elife-compiled.css deploy/css/elife-compiled.css
           touch deploy/.nojekyll
           echo "Deployment contents:"
           ls -la deploy/

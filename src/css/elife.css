@@ -1,0 +1,521 @@
+@import "tailwindcss";
+
+/* =====================================================
+   ELIFE THEME EXTENSIONS
+   Custom colors and fonts matching elifesciences.org
+   ===================================================== */
+
+@theme {
+  /* eLife brand colors */
+  --color-elife-blue: #087acc;
+  --color-elife-blue-hover: #0769b0;
+  --color-elife-dark: #212121;
+  --color-elife-gray: #757575;
+  --color-elife-border: #e0e0e0;
+  --color-elife-bg-pale: #edeff4;
+  --color-elife-bg-light: #f7f7f7;
+  --color-elife-success: #629f43;
+
+  /* eLife fonts */
+  --font-sans: "Noto Sans", Arial, Helvetica, sans-serif;
+  --font-serif: "Noto Serif", Georgia, serif;
+}
+
+/* =====================================================
+   BASE STYLES
+   ===================================================== */
+
+body {
+  @apply bg-white text-elife-dark;
+  @apply font-serif text-base leading-normal;
+}
+
+.wrapper,
+.container {
+  @apply mx-auto px-6 lg:px-12;
+  @apply max-w-[69.625rem];
+}
+
+/* =====================================================
+   TYPOGRAPHY
+   ===================================================== */
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-bold;
+  font-family: var(--font-sans);
+}
+
+h1 {
+  @apply text-4xl;
+}
+
+h2 {
+  @apply text-[1.625rem] py-5;
+}
+
+h3 {
+  @apply text-[1.375rem] py-3;
+}
+
+p a:not(.btn):not(.badge) {
+  @apply text-elife-dark border-b border-dotted border-elife-dark;
+  @apply transition-colors;
+  @apply hover:text-elife-blue hover:border-elife-blue;
+}
+
+/* =====================================================
+   SITE HEADER
+   ===================================================== */
+
+.site-header {
+  @apply bg-white border-b border-elife-border;
+  @apply sticky top-0 z-50;
+}
+
+.site-header__container {
+  @apply mx-auto px-6 flex items-center justify-between py-4;
+  @apply max-w-[69.625rem];
+}
+
+.site-header__logo {
+  @apply flex items-center;
+}
+
+.logo {
+  @apply text-3xl font-bold text-elife-blue;
+  font-family: var(--font-sans);
+}
+
+.site-header__actions {
+  @apply flex gap-3;
+}
+
+/* =====================================================
+   MAIN NAVIGATION
+   ===================================================== */
+
+.main-nav {
+  @apply hidden md:flex gap-6;
+  font-family: var(--font-sans);
+}
+
+.main-nav__item {
+  @apply font-medium py-2 text-sm text-elife-dark;
+  @apply transition-colors hover:text-elife-blue;
+}
+
+.main-nav__item--active {
+  @apply text-elife-blue border-b-2 border-elife-blue;
+}
+
+/* =====================================================
+   BUTTONS
+   ===================================================== */
+
+.btn {
+  @apply inline-block rounded font-semibold uppercase;
+  @apply transition-all duration-200;
+  @apply text-xs tracking-wide;
+  font-family: var(--font-sans);
+}
+
+.btn--primary {
+  @apply bg-elife-blue text-white;
+  @apply px-9 py-4;
+  @apply hover:bg-elife-blue-hover;
+}
+
+.btn--secondary {
+  @apply bg-elife-bg-light border border-elife-border;
+  @apply text-elife-dark px-9 py-4;
+  @apply hover:bg-elife-border;
+}
+
+.btn--outline {
+  @apply bg-white border border-elife-blue;
+  @apply text-elife-blue px-9 py-4;
+  @apply hover:bg-elife-blue hover:text-white;
+}
+
+.btn--small {
+  @apply px-3 py-1 text-xs;
+}
+
+.btn--large {
+  @apply px-8 py-4 text-sm;
+}
+
+.btn--full-width {
+  @apply w-full text-center;
+}
+
+/* =====================================================
+   SEARCH BAR
+   ===================================================== */
+
+.search-bar {
+  @apply bg-elife-bg-light border-b border-elife-border;
+}
+
+.search-bar__container {
+  @apply mx-auto px-6 py-4 flex gap-2;
+  @apply max-w-[69.625rem];
+}
+
+.search-bar__input {
+  @apply flex-1 px-4 py-2 border border-elife-border rounded;
+  @apply focus:outline-none focus:ring-2 focus:ring-elife-blue focus:border-transparent;
+  font-family: var(--font-sans);
+}
+
+.search-bar__button {
+  @apply px-6 py-2 rounded font-semibold;
+  @apply bg-elife-blue text-white;
+  @apply transition-colors hover:bg-elife-blue-hover;
+  font-family: var(--font-sans);
+}
+
+/* =====================================================
+   HERO SECTION
+   ===================================================== */
+
+.hero {
+  @apply bg-elife-bg-pale py-12 md:py-[4.5rem];
+}
+
+.hero__container {
+  @apply mx-auto px-6 text-center;
+  @apply max-w-[69.625rem];
+}
+
+.hero__title {
+  @apply font-bold text-elife-dark mb-8 mx-auto;
+  @apply text-3xl md:text-4xl leading-tight;
+  @apply max-w-[56rem];
+  font-family: var(--font-sans);
+}
+
+.hero__actions {
+  @apply flex flex-col sm:flex-row gap-4 justify-center mb-8;
+}
+
+.hero__filter {
+  @apply max-w-md mx-auto;
+}
+
+.category-filter {
+  @apply w-full px-4 py-2 border border-elife-border rounded;
+  @apply focus:outline-none focus:ring-2 focus:ring-elife-blue;
+  font-family: var(--font-sans);
+}
+
+/* =====================================================
+   SECTION TITLES
+   ===================================================== */
+
+.section-title {
+  @apply font-bold text-elife-dark mb-6;
+  @apply text-[1.625rem];
+  font-family: var(--font-sans);
+}
+
+/* =====================================================
+   HIGHLIGHTS SECTION
+   ===================================================== */
+
+.highlights {
+  @apply bg-white py-12 md:py-[4.5rem];
+}
+
+.highlights__container {
+  @apply mx-auto px-6 max-w-[69.625rem];
+}
+
+.article-grid {
+  @apply grid gap-6;
+  @apply grid-cols-[repeat(auto-fill,minmax(280px,1fr))];
+}
+
+/* =====================================================
+   ARTICLE CARD
+   ===================================================== */
+
+.article-card {
+  @apply bg-white border border-elife-border rounded overflow-hidden;
+  @apply transition-shadow duration-300 hover:shadow-lg;
+}
+
+.article-card__image {
+  @apply h-48 bg-elife-bg-pale;
+  @apply flex items-center justify-center relative;
+}
+
+.article-card__placeholder {
+  @apply text-6xl;
+}
+
+.article-card__content {
+  @apply p-6;
+}
+
+.article-card__title {
+  @apply font-bold text-elife-dark mb-2;
+  @apply text-base leading-snug;
+  @apply cursor-pointer transition-colors hover:text-elife-blue;
+  font-family: var(--font-sans);
+}
+
+.article-card__authors {
+  @apply text-sm text-elife-gray mb-2 leading-normal;
+}
+
+.article-card__date {
+  @apply text-sm text-elife-gray inline-block;
+}
+
+/* =====================================================
+   BADGES
+   ===================================================== */
+
+.badge {
+  @apply inline-block px-3 py-1 rounded font-semibold mb-3;
+  @apply text-xs uppercase tracking-wide;
+  font-family: var(--font-sans);
+}
+
+.badge--reviewed {
+  @apply bg-blue-100 text-elife-blue;
+}
+
+.badge--research {
+  @apply bg-green-100 text-elife-success;
+}
+
+.badge--small {
+  @apply px-2 py-0.5 text-[0.625rem];
+}
+
+/* =====================================================
+   LATEST RESEARCH SECTION
+   ===================================================== */
+
+.latest-research {
+  @apply bg-elife-bg-light py-12 md:py-[4.5rem];
+}
+
+.latest-research__container {
+  @apply mx-auto px-6 max-w-[69.625rem];
+}
+
+.research-list {
+  @apply mb-8 flex flex-col gap-6;
+}
+
+/* =====================================================
+   RESEARCH ITEM
+   ===================================================== */
+
+.research-item {
+  @apply bg-white border border-elife-border rounded;
+  @apply flex gap-4 p-6;
+  @apply transition-colors hover:border-elife-blue;
+}
+
+.research-item__number {
+  @apply w-10 h-10 rounded-full;
+  @apply bg-elife-bg-pale text-elife-blue;
+  @apply flex items-center justify-center;
+  @apply font-bold text-base shrink-0;
+  font-family: var(--font-sans);
+}
+
+.research-item__content {
+  @apply flex-1;
+}
+
+.research-item__meta {
+  @apply flex items-center flex-wrap gap-4 mb-2;
+}
+
+.category-tag {
+  @apply font-semibold px-2 py-1 rounded;
+  @apply bg-blue-50 text-elife-blue;
+  @apply text-xs uppercase tracking-wide;
+  font-family: var(--font-sans);
+}
+
+.research-item__status {
+  @apply flex items-center gap-1;
+  @apply text-xs text-elife-gray;
+  font-family: var(--font-sans);
+}
+
+.status-dot {
+  @apply w-2 h-2 rounded-full bg-elife-border;
+}
+
+.status-dot--revised {
+  @apply bg-elife-success;
+}
+
+.research-item__title {
+  @apply font-bold text-elife-dark mb-2;
+  @apply text-base leading-snug;
+  @apply cursor-pointer transition-colors hover:text-elife-blue;
+  font-family: var(--font-sans);
+}
+
+.research-item__authors {
+  @apply text-sm text-elife-gray mb-3;
+}
+
+.research-item__footer {
+  @apply flex items-center flex-wrap gap-3;
+}
+
+.research-item__date {
+  @apply text-sm text-elife-gray;
+}
+
+/* =====================================================
+   MAGAZINE SECTION
+   ===================================================== */
+
+.magazine {
+  @apply bg-white py-12 md:py-[4.5rem];
+}
+
+.magazine__container {
+  @apply mx-auto px-6 max-w-[69.625rem];
+}
+
+.magazine-grid {
+  @apply grid gap-6;
+  @apply grid-cols-[repeat(auto-fill,minmax(280px,1fr))];
+}
+
+/* =====================================================
+   MAGAZINE CARD
+   ===================================================== */
+
+.magazine-card {
+  @apply bg-white border border-elife-border rounded overflow-hidden;
+  @apply transition-shadow duration-300 hover:shadow-lg;
+}
+
+.magazine-card__image {
+  @apply h-40 flex items-center justify-center;
+  @apply bg-gradient-to-br from-blue-100 to-purple-100;
+}
+
+.magazine-card__placeholder {
+  @apply text-5xl;
+}
+
+.magazine-card__content {
+  @apply p-6;
+}
+
+.magazine-card__type {
+  @apply block mb-2 font-semibold uppercase;
+  @apply text-xs text-elife-blue tracking-wide;
+  font-family: var(--font-sans);
+}
+
+.magazine-card__title {
+  @apply font-bold text-elife-dark mb-2;
+  @apply text-base leading-snug;
+  @apply cursor-pointer transition-colors hover:text-elife-blue;
+  font-family: var(--font-sans);
+}
+
+.magazine-card__excerpt {
+  @apply text-sm text-elife-gray leading-normal;
+}
+
+/* =====================================================
+   CATEGORIES SECTION
+   ===================================================== */
+
+.categories {
+  @apply bg-elife-bg-light py-12 md:py-[4.5rem];
+}
+
+.categories__container {
+  @apply mx-auto px-6 max-w-[69.625rem];
+}
+
+.category-list {
+  @apply grid gap-3;
+  @apply grid-cols-[repeat(auto-fill,minmax(250px,1fr))];
+}
+
+.category-link {
+  @apply block bg-white border border-elife-border rounded;
+  @apply text-elife-dark font-medium p-4;
+  @apply text-sm transition-all duration-200;
+  @apply hover:text-elife-blue hover:border-elife-blue;
+  font-family: var(--font-sans);
+}
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+.site-footer {
+  @apply bg-elife-dark text-gray-400 py-12;
+}
+
+.site-footer__container {
+  @apply mx-auto px-6 max-w-[69.625rem];
+}
+
+.footer-grid {
+  @apply grid gap-8 mb-8;
+  @apply grid-cols-[repeat(auto-fit,minmax(200px,1fr))];
+}
+
+.footer-column__title {
+  @apply font-bold mb-4 text-white text-base;
+  font-family: var(--font-sans);
+}
+
+.footer-links {
+  @apply space-y-2;
+}
+
+.footer-links__item {
+  @apply text-gray-400 text-sm;
+  @apply transition-colors hover:text-white;
+}
+
+.site-footer__bottom {
+  @apply border-t border-gray-700 pt-8;
+  @apply text-sm text-gray-500;
+}
+
+.site-footer__copyright {
+  @apply mb-2;
+}
+
+.site-footer__address {
+  @apply text-xs;
+}
+
+/* =====================================================
+   RESPONSIVE ADJUSTMENTS
+   ===================================================== */
+
+@media (max-width: 768px) {
+  .main-nav {
+    @apply hidden;
+  }
+
+  .site-header__actions {
+    @apply flex-col gap-2;
+  }
+
+  .btn {
+    @apply w-full text-center;
+  }
+}
